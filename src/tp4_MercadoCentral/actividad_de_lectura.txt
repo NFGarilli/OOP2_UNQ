@@ -1,0 +1,35 @@
+1..
+¿que ventajas en cuanto a polimorfismo, brindan las interfaces en java?
+	
+	Las interfaces proveen mayor abstraccion a nuestro proyecto.
+
+2..
+¿por qué no siempre puedo utilizar clases abstractas para agrupar clases 
+	polimórifcas?
+
+	Porque no siempre se da el caso de que nuestras clases cumplan entre si un mismo protocolo, estructura y comportamiento.
+	Si tienen mas diferencias que cosas en comun, no vale la pena agruparlas en una misma clase abstracta.
+
+3..
+¿que ventajas tienen las clases abstractas sobre interfaces?
+
+	Las clases abstractas nos dan la posibilidad de que nuestras clases hereden tanto una estructura, como protocolo y comportamiento.
+	En cambio, las interfaces solo proveen que nuestras clases tengan un mayor nivel de abstraccion asegurando que nuestras clases sepan responder cierto mensaje.
+
+4..
+¿se puede instanciar una interface?
+
+	No veo porque quisieras instanciar una interface, ya que las interfaces plantean metodos sin cuerpo para asegurar que nuestras clases sepan responder dichos mensajes.
+	Como nuestra interface solo tiene metodos vacios, no veo el punto en instanciar una interface.
+
+5..
+¿por que no es recomendable incrementar o modificar las firmas definidas
+	 en una interface?
+
+	Supongo que porque todos los objetos o clases que utilicen esa interface van a necesitar cumplir con los mensajes que esa interfaz tenga definidos.
+	Si incremento o modifico los metodos de mi interface, tendria que modificar todos mis objetos/clases que utilicen dicha interfaz.
+
+6..
+¿ por que en smalltalk no es necesaria la implementacion de interfaces.?
+
+	Porque Java es un lenguaje staticamente tipado y Smalltalk no, 
