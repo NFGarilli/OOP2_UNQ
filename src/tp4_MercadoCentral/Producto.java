@@ -1,4 +1,4 @@
-package tp4MercadoCentral;
+package tp4_MercadoCentral;
 
 public class Producto implements IPrecio{
 	protected Double precio;

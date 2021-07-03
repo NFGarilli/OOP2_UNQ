@@ -1,0 +1,43 @@
+tp7_Composite_Actividad_De_Lectura.
+
+Ejercicio 1. Desde el libro:
+
+1.. En la intención del patrón se indica que el cliente debe poder tratar de manera uniforme tanto a objetos individuales como compuestos. ¿ Cómo se logra esto con el patrón Composite?
+
+.. Para tratar de manera uniforme a distintos objetos se puede implementar una interface, o realizar una superclase para objetos individuales y compuestos.
+
+2.. Explique en que casos aplicaria el patron.
+
+.. En casos de que quiera contruir una estructura compuesta a partir de objetos simples/compuestos. Tambien la utilizaria cuando requiero que el cliente trate a objetos individuales y complejos como iguales.
+
+3.. Dentro de las consecuencias, se indica que los clientes deben mantenerse simples y no deben ser conscientes si están interactuando con un objeto hoja o una composición. ¿Que elementos de la programacion orientada a objetos hacen posible esto?
+
+.. Los elementos que hacen posible esto son las interfaces, la herencia y el polimorfismo.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ejercicio 2. Cultivos:
+
+1.. ¿Que impacto genera en su diseño el hecho de compartir instancias de parcelas entre composiciones? Es decir, que la misma instancia se encuentre en más de una composición.
+
+.. Esto genero que en mi diseño, al momento de instanciar una porcionMixta, la misma debe recibir por parametro las 4 porciones que la dividen al ser instanciada. Una vez instanciada, puede calcular su ganancia preguntandole a cada porcion que la compone su precio y luego dividiendo ese total por la cantidad de porciones (4).
+
+3.. Describa las alternativas que puede utilizar para calcular la ganancia anual. Relacione las alternativas
+
+.. Se me ocurrio que las porcionesPuras conozcan su valor base al ser instanciadas, mientras que las PorcionesMixtas puedan preguntarle a las porciones que las compone su precio, sumarlo, y divirlo por la cantidad de porciones por la cual esta compuesta.
+
+4.. Explique la discusión sobre quiénes deben implementar las operaciones de agregado y borrado de hijos.
+
+.. Los encargados de poder agregar/borrar hijos deberian de ser las clases que sean compuestas.
+
+5.. Sobre su implementación, indique los roles que desempeñan cada una de las clases diseñadas en relación al patrón Composite.
+
+.. Las porcionesPuras serian las hojas, mientras que las porcionesMixtas serian el Composite y la IPorcion el Component.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ejercicio 3. Warcraft:
+
+3. En esta solucion utilice al caballero y al ingeniero como hojas, al ejercito como composite y al IPersonaje como el component. Utilizamos el patron de diseño composite implementado con interfaces.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////

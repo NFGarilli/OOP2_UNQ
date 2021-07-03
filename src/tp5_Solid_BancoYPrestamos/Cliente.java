@@ -1,4 +1,4 @@
-package bancoYPrestamos;
+package tp5_Solid_BancoYPrestamos;
 
 public class Cliente {
 

@@ -1,9 +1,9 @@
-package openClosedPrinciple.caso1;
+package tp5_Solid_ClienteEmail;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServidorPop implements IServidor {
+public class ServidorPop implements IServidor, IPop {
 
 	public List<Correo> recibirNuevos(String user, String pass) {
 		List<Correo> retorno = new ArrayList<Correo>();

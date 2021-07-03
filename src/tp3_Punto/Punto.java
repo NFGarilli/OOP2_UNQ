@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp3;
+package tp3_Punto;
 
 public class Punto {
 

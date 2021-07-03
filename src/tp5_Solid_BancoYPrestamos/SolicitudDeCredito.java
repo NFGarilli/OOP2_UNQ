@@ -1,4 +1,4 @@
-package bancoYPrestamos;
+package tp5_Solid_BancoYPrestamos;
 
 public abstract class SolicitudDeCredito {
 	protected float monto;

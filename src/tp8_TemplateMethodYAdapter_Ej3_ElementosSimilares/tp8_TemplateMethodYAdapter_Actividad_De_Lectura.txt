@@ -1,0 +1,41 @@
+TP8_TemplateMethodYAdapter_Ej1_Actividad_De_Lectura
+
+Ej1..
+
+a.. ¿Dónde se define el esqueleto del algoritmo?
+
+.. El esqueleto de define en la superclase, de esta manera, las subclases podran implementarlos.
+	 
+b.. ¿Se puede redefinir el esqueleto?
+
+.. Si redefino el esqueleto en la superclase, tendria que tocar todas las subclases que heredan esos mensajes. Ademas, no se debe redefinir el esqueleto en las subclases.
+	 
+c.. ¿Qué es lo que se puede redefinir?
+
+.. Se puede redefinir los metodos abstractos y los metodos consideros hooks.
+	 
+d.. ¿Qué es un hook method?
+
+.. Un metodo hook es un metodo que provee un cuerpo por default el cual las subclases van a utilizar desde la super clase. Sin embargo, el mismo puede ser redefinido por las subclases con un @Override.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ej5.. Ayudando al soberano
+
+2..
+
+Clase abstracta: CuentaBancaria
+Clase concetra: CuentaCorriente, CajaDeAhorro
+Template method: extraer();
+operaciones primitivas: puedeExtraer();
+operaciones concretas: 	CuentaBancaria.agregarMovimiento();
+			SubClase.puedeExtraer();
+hook methods: No utilice.
+	 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ej6.. Contestar y justificar respuestas.
+
+1.. Existe más de un tipo de adaptadores, mencione y explique cada uno de ellos
+
+.. Existe el adaptador de objetos y tambien existe el adaptador de clases.
