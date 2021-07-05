@@ -24,16 +24,23 @@ public class ShapeShifterBasico implements IShapeShifter {
 	}
 
 	@Override
-	public int deepest() {
+	public Integer deepest() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	
+	public IShapeShifter getFlat() {
+		// TODO Auto-generated method stub
+		return this;
+	}
+	
 	@Override
 	public IShapeShifter flat() {
 		// TODO Auto-generated method stub
 		return this;
 	}
+	
 
 	@Override
 	public List<Integer> values() {
@@ -47,6 +54,25 @@ public class ShapeShifterBasico implements IShapeShifter {
 
 	public void setValor(Integer valor) {
 		this.valor = valor;
+	}
+
+	@Override
+	public void agregarProfundidad(Integer profundidad, IShapeShifter iShapeShifter) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public int getProfundidad() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setProfundidad(int i) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

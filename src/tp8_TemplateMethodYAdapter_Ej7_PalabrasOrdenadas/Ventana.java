@@ -4,8 +4,12 @@ import java.awt.Rectangle;
 
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
 
-public class Ventana {
+@SuppressWarnings("serial")
+public class Ventana extends JFrame {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Ventana(DefaultListModel listModel){
@@ -27,7 +31,12 @@ public class Ventana {
 
 
 	public static void main(String[] args) {
-		new Ventana(new DefaultListModel());
+		ListaDePalabrasOrdenadas listaDePalabrasOrdenadas1 = new ListaDePalabrasOrdenadas();
+		ListaDePalabrasOrdenadasAdapter listaDePalabrasOrdenadasAdapter = new ListaDePalabrasOrdenadasAdapter(listaDePalabrasOrdenadas1);
+		
+		
+		new Ventana(listaDePalabrasOrdenadasAdapter);
+
 		/*esta línea puede modificarse luego de resolver el ejercicio.*/
 		}
 }

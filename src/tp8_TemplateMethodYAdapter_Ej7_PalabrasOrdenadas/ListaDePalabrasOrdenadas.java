@@ -8,8 +8,10 @@ import java.util.List;
 public class ListaDePalabrasOrdenadas {
 	
 		private List<String>palabras;
+		@SuppressWarnings("rawtypes")
 		private final Comparator comparador;
 		
+		@SuppressWarnings("rawtypes")
 		public ListaDePalabrasOrdenadas(){
 			this.palabras= new LinkedList<String>();
 			this.comparador= new Comparator(){
@@ -22,6 +24,7 @@ public class ListaDePalabrasOrdenadas {
 			};
 		}
 		
+		@SuppressWarnings("unchecked")
 		public void agregarPalabra(String palabra){
 			this.palabras.add(palabra);
 			Collections.sort(this.palabras, this.comparador);

@@ -1,0 +1,104 @@
+Tp6_ActividadDeLectura
+
+
+Ej1.. TDD y Test de Unidad.
+
+	EXPLIQUE Y DESARROLLE
+
+
+1.. Mantener en forma exhaustiva una suite de tests.
+
+
+.. Se debe mantener todos los tests de mi sistema de forma exhaustiva debido a que es necesario testear cada funcionalidad nueva que agregue a mi proyecto, tanto para saber si funciona y para identificar si hay un error facilmente gracias a los tests.
+
+
+2.. No deben utilizarse para testear otros objetos del dominio.
+
+
+.. Se refiere a que debo realizar tests unitarios para cada objeto de mi sistema y que en dicho test los objetos que esten fuera de mi SUT (Subject under test) no deben interferir. Para realizar esto puedo utilizar test doubles y mockear mi DOC (Depended on component) para asegurarme de testear el objeto que quiero testear y no otros objetos, debido a que mi test podria fallar y no por culpa de mi SUT.
+
+
+3.. Comunicar la intencion del test.
+
+
+.. El nombre de mis tests deben de ser bien explicitos y comunicar lo que estan testeando cada uno. Puedo tambien agregar comentarios para ayudar a la comunicacion.
+
+
+Ej.. 4 MOCKITO
+
+
+1.. ¿Cómo se indica en mockito que el objeto mock debe recibir un secuencia de mensajes particular en un orden preestablecido?
+
+
+.. Con Mockito podemos utilizar una instancia de la clase InOrder para verificar que los mensajes que recibe nuestro mock sean recibidos en el orden que esperamos.
+
+
+2.. ¿Cómo hacer para que un objeto mock este preparado para recibir algunos mensajes sin importar el orden o la obligatoriedad de recibirlos?
+
+
+..  Se puede utilizar el metodo when para que nuestro mock este preparado para recibir mensajes sin importar el orden ni que se a obligatorio que reciba uno.
+
+
+3..  Es posible anidar envío de mensajes con mockito. Si es posible, como se hace.
+
+
+.. Tambien podemos utilizar el metodo when(mock.mensajeARecibir()).thenReturn(valorARetornar1, valorARetornar2).. y tantos argumentos como queramos.
+
+
+4..  ¿Como es la forma de verificación con mockito?
+
+.. Se utiliza el mensaje verify(mock).methodCall para verificar el recibo de un mensaje.
+	Se utiliza el mensaje verify(mock, VerificationMode).methodCall donde VerificationMode seria el metodo de verificacion. Dentro de ellos tenemos AtLeast(CantidadMinimaDeVecesLlamadas), AtMost(CantidadMaximaDeVecesLlamadas), etc.
+
+Ej..  6 TEST DOUBLES
+
+1.. Qué son los test doubles?
+
+.. Es una manera de testear a mi SUT sin depender del funcionamiento de los otros objetos de mi proyecto. (DOC).
+
+
+2.. Enumere los tipos de test doubles y de ejemplos concretos de uso. Indique como usaría, cuando es posible, mockito para emular los diferentes tipos de tipos de test doubles. 
+
+.. Existen 4 tipos:
+
+	DUMMY: Un objeto que no tiene comportamiento alguno, solo se utiliza en casos que requiera de rellenar un espacio. 
+		TipoDeObjeto nombreVariable = mock(TipoDeObjeto.class);
+
+	STUB:  Se utiliza cuando queremos que un mock sepa recibir un mensaje y responderlo de la manera en la cual configuremos.
+		TipoDeObjeto nombreVariable = mock(TipoDeObjeto.class);
+		when(nombreVariable.mensajeARecibir()).thenReturn(valorARetornar);
+
+	MOCK: Es igual que un STUB pero ademas tiene la capacidad de verificarse.
+		TipoDeObjeto nombreVariable = mock(TipoDeObjeto.class);
+		when(nombreVariable.mensajeARecibir()).thenReturn(valorARetornar);
+		//A la hora de verificar hacemos 
+		verify(nombreVariable, atLeast(1)).mensajeAChequear();
+
+	SPY: El SPY responde como si fuera el objeto real llamando a sus metodos reales y ademas nos brinda la posibilad de saber la cantidad de envios de un mensaje y si le llego el mensaje correspondiente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -5,8 +5,11 @@ import java.util.List;
 public interface IShapeShifter {
 	
 	public IShapeShifter compose(IShapeShifter iShapeShifter);
-	public int deepest();
+	public Integer deepest();
 	public IShapeShifter flat();
 	public List<Integer> values();
+	public void agregarProfundidad(Integer profundidad, IShapeShifter iShapeShifter);
+	public int getProfundidad();
+	public void setProfundidad(int i);
 	
 }
